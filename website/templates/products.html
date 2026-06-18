@@ -7,6 +7,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    ```
     <title>Products | Chandu Granites, Marbles & Tiles</title>
 
     <link rel="icon" type="image/png" href="{% static 'images/log.png' %}" />
@@ -22,8 +23,6 @@
       body {
         background: #f5f5f5;
       }
-
-      /* Header */
 
       header {
         background: #1f2937;
@@ -49,15 +48,11 @@
         color: #fbbf24;
       }
 
-      /* Title */
-
       .section-title {
         text-align: center;
         margin: 40px 0;
         color: #1f2937;
       }
-
-      /* Products */
 
       .products {
         display: flex;
@@ -114,7 +109,9 @@
         font-weight: bold;
       }
 
-      /* Footer */
+      .buy-btn:hover {
+        background: #1faa52;
+      }
 
       footer {
         background: #1f2937;
@@ -123,8 +120,6 @@
         padding: 25px;
         margin-top: 40px;
       }
-
-      /* Floating Buttons */
 
       .instagram {
         position: fixed;
@@ -149,7 +144,19 @@
         text-decoration: none;
         font-weight: bold;
       }
+
+      @media (max-width: 768px) {
+        .product-card {
+          width: 90%;
+        }
+
+        nav a {
+          display: block;
+          margin: 10px 0;
+        }
+      }
     </style>
+    ```
   </head>
 
   <body>
@@ -172,7 +179,7 @@
       <!-- Product 1 -->
 
       <div class="product-card">
-        <img src="{% static 'images/product1.jpg' %}" alt="Black Granite" />
+        <img src="{% static 'images/pr1.jpg' %}" alt="Black Granite" />
 
         <h3>Black Granite</h3>
 
@@ -181,7 +188,7 @@
         <p>Premium polished black granite slab.</p>
 
         <a
-          href="https://wa.me/919705005580?text=Hello%20I%20want%20Black%20Granite"
+          href="https://wa.me/919705005580?text=Hello%20Chandu%20Granites,%20I%20want%20to%20order%20Black%20Granite.%20Price:%20₹120/Sq.ft"
           target="_blank"
           class="buy-btn"
         >
@@ -192,7 +199,7 @@
       <!-- Product 2 -->
 
       <div class="product-card">
-        <img src="{% static 'images/product2.jpg' %}" alt="Red Granite" />
+        <img src="{% static 'images/pr2.jpg' %}" alt="Red Granite" />
 
         <h3>Red Granite</h3>
 
@@ -201,7 +208,7 @@
         <p>High quality red granite for flooring.</p>
 
         <a
-          href="https://wa.me/919705005580?text=Hello%20I%20want%20Red%20Granite"
+          href="https://wa.me/919705005580?text=Hello%20Chandu%20Granites,%20I%20want%20to%20order%20Red%20Granite.%20Price:%20₹140/Sq.ft"
           target="_blank"
           class="buy-btn"
         >
@@ -212,7 +219,7 @@
       <!-- Product 3 -->
 
       <div class="product-card">
-        <img src="{% static 'images/product3.jpg' %}" alt="White Granite" />
+        <img src="{% static 'images/pr3.jpg' %}" alt="White Granite" />
 
         <h3>White Granite</h3>
 
@@ -221,7 +228,7 @@
         <p>Luxury white granite collection.</p>
 
         <a
-          href="https://wa.me/919705005580?text=Hello%20I%20want%20White%20Granite"
+          href="https://wa.me/919705005580?text=Hello%20Chandu%20Granites,%20I%20want%20to%20order%20White%20Granite.%20Price:%20₹160/Sq.ft"
           target="_blank"
           class="buy-btn"
         >
@@ -232,7 +239,7 @@
       <!-- Product 4 -->
 
       <div class="product-card">
-        <img src="{% static 'images/product4.jpg' %}" alt="Italian Marble" />
+        <img src="{% static 'images/pr4.jpg' %}" alt="Italian Marble" />
 
         <h3>Italian Marble</h3>
 
@@ -241,7 +248,7 @@
         <p>Premium imported Italian marble.</p>
 
         <a
-          href="https://wa.me/919705005580?text=Hello%20I%20want%20Italian%20Marble"
+          href="https://wa.me/919705005580?text=Hello%20Chandu%20Granites,%20I%20want%20to%20order%20Italian%20Marble.%20Price:%20₹220/Sq.ft"
           target="_blank"
           class="buy-btn"
         >
@@ -252,7 +259,7 @@
       <!-- Product 5 -->
 
       <div class="product-card">
-        <img src="{% static 'images/product5.jpg' %}" alt="Tiles" />
+        <img src="{% static 'images/pr5.jpg' %}" alt="Premium Tiles" />
 
         <h3>Premium Tiles</h3>
 
@@ -261,7 +268,7 @@
         <p>Designer floor and wall tiles.</p>
 
         <a
-          href="https://wa.me/919705005580?text=Hello%20I%20want%20Premium%20Tiles"
+          href="https://wa.me/919705005580?text=Hello%20Chandu%20Granites,%20I%20want%20to%20order%20Premium%20Tiles.%20Price:%20₹55/Sq.ft"
           target="_blank"
           class="buy-btn"
         >
