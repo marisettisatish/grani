@@ -1,0 +1,45 @@
+{% load static %}
+
+<!doctype html>
+<html>
+  <head>
+    <title>Granite Industries</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chandu Granites, Marbles & Tiles</title>
+
+    <!-- Website Logo (Browser Tab) -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}" />
+
+    <!-- Google Description -->
+    <meta
+      name="description"
+      content="Premium Granite, Marble and Tiles supplier in Samisragudem."
+    />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <img src="{% static 'images/logo.png' %}" width="80" />
+
+      <h1>Granite Industries</h1>
+
+      <nav>
+        <a href="/">Home</a>
+        <a href="/about/">About</a>
+        <a href="/products/">Products</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/contact/">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">{% block content %} {% endblock %}</div>
+
+    <footer>
+      <p>© 2026 Granite Industries</p>
+    </footer>
+  </body>
+</html>

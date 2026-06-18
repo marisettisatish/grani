@@ -1,0 +1,296 @@
+{% load static %}
+
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Products | Chandu Granites, Marbles & Tiles</title>
+
+    <link rel="icon" type="image/png" href="{% static 'images/log.png' %}" />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      /* Header */
+
+      header {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      nav {
+        background: #374151;
+        text-align: center;
+        padding: 15px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #fbbf24;
+      }
+
+      /* Title */
+
+      .section-title {
+        text-align: center;
+        margin: 40px 0;
+        color: #1f2937;
+      }
+
+      /* Products */
+
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 20px;
+      }
+
+      .product-card {
+        width: 320px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+        text-align: center;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .product-card h3 {
+        margin-top: 15px;
+      }
+
+      .price {
+        color: green;
+        font-size: 22px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      .product-card p {
+        padding: 0 15px;
+        margin-bottom: 15px;
+      }
+
+      .buy-btn {
+        display: inline-block;
+        margin: 15px;
+        padding: 12px 20px;
+        background: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      /* Footer */
+
+      footer {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 40px;
+      }
+
+      /* Floating Buttons */
+
+      .instagram {
+        position: fixed;
+        right: 20px;
+        bottom: 85px;
+        background: #e1306c;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .whatsapp {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #25d366;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Chandu Granites, Marbles & Tiles</h1>
+      <p>Premium Granite • Marble • Tiles</p>
+    </header>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products/">Products</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <h2 class="section-title">Our Products</h2>
+
+    <div class="products">
+      ```
+      <!-- Product 1 -->
+
+      <div class="product-card">
+        <img src="{% static 'images/product1.jpg' %}" alt="Black Granite" />
+
+        <h3>Black Granite</h3>
+
+        <div class="price">₹120 / Sq.ft</div>
+
+        <p>Premium polished black granite slab.</p>
+
+        <a
+          href="https://wa.me/919705005580?text=Hello%20I%20want%20Black%20Granite"
+          target="_blank"
+          class="buy-btn"
+        >
+          🛒 Order on WhatsApp
+        </a>
+      </div>
+
+      <!-- Product 2 -->
+
+      <div class="product-card">
+        <img src="{% static 'images/product2.jpg' %}" alt="Red Granite" />
+
+        <h3>Red Granite</h3>
+
+        <div class="price">₹140 / Sq.ft</div>
+
+        <p>High quality red granite for flooring.</p>
+
+        <a
+          href="https://wa.me/919705005580?text=Hello%20I%20want%20Red%20Granite"
+          target="_blank"
+          class="buy-btn"
+        >
+          🛒 Order on WhatsApp
+        </a>
+      </div>
+
+      <!-- Product 3 -->
+
+      <div class="product-card">
+        <img src="{% static 'images/product3.jpg' %}" alt="White Granite" />
+
+        <h3>White Granite</h3>
+
+        <div class="price">₹160 / Sq.ft</div>
+
+        <p>Luxury white granite collection.</p>
+
+        <a
+          href="https://wa.me/919705005580?text=Hello%20I%20want%20White%20Granite"
+          target="_blank"
+          class="buy-btn"
+        >
+          🛒 Order on WhatsApp
+        </a>
+      </div>
+
+      <!-- Product 4 -->
+
+      <div class="product-card">
+        <img src="{% static 'images/product4.jpg' %}" alt="Italian Marble" />
+
+        <h3>Italian Marble</h3>
+
+        <div class="price">₹220 / Sq.ft</div>
+
+        <p>Premium imported Italian marble.</p>
+
+        <a
+          href="https://wa.me/919705005580?text=Hello%20I%20want%20Italian%20Marble"
+          target="_blank"
+          class="buy-btn"
+        >
+          🛒 Order on WhatsApp
+        </a>
+      </div>
+
+      <!-- Product 5 -->
+
+      <div class="product-card">
+        <img src="{% static 'images/product5.jpg' %}" alt="Tiles" />
+
+        <h3>Premium Tiles</h3>
+
+        <div class="price">₹55 / Sq.ft</div>
+
+        <p>Designer floor and wall tiles.</p>
+
+        <a
+          href="https://wa.me/919705005580?text=Hello%20I%20want%20Premium%20Tiles"
+          target="_blank"
+          class="buy-btn"
+        >
+          🛒 Order on WhatsApp
+        </a>
+      </div>
+      ```
+    </div>
+
+    <footer>
+      ```
+      <h3>Chandu Granites, Marbles & Tiles</h3>
+
+      <p>📍 Nidadavolu Road, Samisragudem</p>
+
+      <p>📞 9705005580 | 7036139308 | 9948251844</p>
+      ```
+    </footer>
+
+    <a
+      href="https://www.instagram.com/chandu_tiles_and_granites_?igsh=bjYzbnU0d3hrMjk4"
+      target="_blank"
+      class="instagram"
+    >
+      📷 Instagram
+    </a>
+
+    <a href="https://wa.me/919705005580" target="_blank" class="whatsapp">
+      📱 WhatsApp
+    </a>
+  </body>
+</html>

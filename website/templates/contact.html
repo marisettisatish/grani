@@ -1,0 +1,475 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Chandu Granites, Marbles & Tiles</title>
+
+    <link rel="icon" type="image/png" href="{% static 'images/log.png' %}" />
+
+    <meta
+      name="description"
+      content="Premium Granite, Marble and Tiles supplier in Samisragudem."
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f5f5f5;
+      }
+
+      /* Header */
+
+      header {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      header h1 {
+        margin-bottom: 10px;
+      }
+
+      nav {
+        background: #374151;
+        text-align: center;
+        padding: 15px;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #fbbf24;
+      }
+
+      /* Sections */
+
+      .section {
+        padding: 50px 20px;
+      }
+
+      .section-title {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #1f2937;
+      }
+
+      /* Owner Contact */
+
+      .owner-contact {
+        max-width: 1000px;
+        margin: auto;
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .owner-image img {
+        width: 280px;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .owner-details {
+        flex: 1;
+      }
+
+      .owner-details h2 {
+        margin-bottom: 10px;
+        color: #1f2937;
+      }
+
+      .owner-details p {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      /* Map */
+
+      .map-container {
+        max-width: 1000px;
+        margin: auto;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: none;
+      }
+
+      /* Team */
+
+      .workers {
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        padding: 20px;
+        scroll-behavior: smooth;
+      }
+
+      .workers::-webkit-scrollbar {
+        height: 10px;
+      }
+
+      .workers::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 10px;
+      }
+
+      .worker-card {
+        min-width: 300px;
+        width: 300px;
+        flex-shrink: 0;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+
+      .worker-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .worker-card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .worker-card {
+        width: 300px;
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transition: 0.3s;
+      }
+
+      .worker-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .worker-card img {
+        width: 100%;
+        height: 320px;
+        object-fit: cover;
+      }
+
+      .worker-card h3 {
+        margin-top: 15px;
+        color: #1f2937;
+      }
+
+      .worker-card p {
+        margin: 10px 0;
+      }
+
+      .worker-instagram {
+        display: inline-block;
+        margin: 15px;
+        padding: 10px 18px;
+        background: #e1306c;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: bold;
+      }
+
+      /* Footer */
+
+      footer {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 30px;
+      }
+
+      /* Floating Buttons */
+
+      .instagram {
+        position: fixed;
+        right: 20px;
+        bottom: 85px;
+        background: #e1306c;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .whatsapp {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background: #25d366;
+        color: white;
+        padding: 15px 20px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 768px) {
+        .owner-contact {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .owner-image img {
+          width: 200px;
+          height: 200px;
+        }
+
+        .worker-card {
+          width: 90%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Chandu Granites, Marbles & Tiles</h1>
+
+      <p>Contact Us</p>
+    </header>
+
+    <nav>
+      <a href="/">Home</a>
+      <a href="/products/">Products</a>
+      <a href="/gallery/">Gallery</a>
+      <a href="/contact/">Contact</a>
+    </nav>
+
+    <!-- Owner -->
+
+    <section class="section">
+      <h2 class="section-title">Owner & Contact Information</h2>
+
+      <div class="owner-contact">
+        <div class="owner-image">
+          <img src="{% static 'images/owner.png' %}" alt="Owner" />
+        </div>
+
+        <div class="owner-details">
+          <h2>Chandra Sekhar</h2>
+
+          <p><strong>Owner</strong></p>
+
+          <hr />
+          <br />
+
+          <p>📞 9705005580</p>
+
+          <p>📞 7036139308</p>
+
+          <p>📞 9948251844</p>
+
+          <p><strong>GSTIN:</strong> 37AAVFC7742A1Z9</p>
+
+          <p>
+            <strong>Address:</strong><br />
+            Nidadavolu Road,<br />
+            Kalavacherla
+          </p>
+
+          <p>
+            <strong>Instagram:</strong><br />
+            @chandu_tiles_and_granites_
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+
+    <section class="section">
+      <h2 class="section-title">Our Location</h2>
+
+      <div class="map-container">
+        <iframe
+          src="https://maps.google.com/maps?q=Samisragudem&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        >
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Team -->
+
+    <section class="section">
+      <h2 class="section-title">Our Team</h2>
+
+      <div class="workers">
+        <!-- Worker 1 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w3.png' %}" alt="N. Balaji" />
+
+          <h3>N. Balaji</h3>
+
+          <p>Experience : 8 Years</p>
+
+          <a
+            href="https://www.instagram.com/__balaji__naidu__1/?utm_source=ig_web_button_share_sheet"
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+        <!-- Worker 3 -->
+        <div class="worker-card">
+          <img src="{% static 'images/w1.png' %}" alt="K Sai" />
+
+          <h3>K. Sai</h3>
+
+          <p>Experience : 6 Years</p>
+
+          <a
+            href="https://www.instagram.com/happy_boy_saii_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+
+        <!-- Worker 2 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w2.png' %}" alt="M Balasai" />
+
+          <h3>M. Balasai</h3>
+
+          <p>Experience : 6 Years</p>
+
+          <a
+            href="https://www.instagram.com/_saiiiiii_20?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+        <!-- Worker 4 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w4.png' %}" alt="N. Balaji" />
+
+          <h3>M.venky</h3>
+
+          <p>Experience : 6 Years</p>
+
+          <a
+            href="https://www.instagram.com/venky_lochal_abbhai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+        <!-- Worker 3 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w6.png' %}" alt="N. Balaji" />
+
+          <h3>M. Durgesh</h3>
+
+          <p>Experience : 6 Years</p>
+
+          <a
+            href="https://www.instagram.com/durgesh_2718_9?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+        <!-- Worker 5 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w5.png' %}" alt="N. Balaji" />
+
+          <h3>N. Venkatesh</h3>
+
+          <p>Experience : 4 Years</p>
+
+          <a
+            href="https://www.instagram.com/venky_alone_46?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+        <!-- Worker 3 -->
+
+        <div class="worker-card">
+          <img src="{% static 'images/w7.png' %}" alt="N. Balaji" />
+
+          <h3>M.sai</h3>
+
+          <p>Experience : 2 Years</p>
+
+          <a
+            href="https://www.instagram.com/__sai_kumar_05__?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            class="worker-instagram"
+          >
+            📷 Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <h3>Chandu Granites, Marbles & Tiles</h3>
+
+      <p>Premium Granite • Marble • Tiles</p>
+
+      <p>📍 Nidadavolu Road, Kalavacherla</p>
+    </footer>
+
+    <a
+      href="https://www.instagram.com/chandu_tiles_and_granites_?igsh=bjYzbnU0d3hrMjk4"
+      target="_blank"
+      class="instagram"
+    >
+      📷 Company Instagram
+    </a>
+
+    <a href="https://wa.me/919705005580" target="_blank" class="whatsapp">
+      📱 WhatsApp
+    </a>
+  </body>
+</html>
