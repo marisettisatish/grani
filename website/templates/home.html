@@ -58,7 +58,30 @@
         text-align: center;
         padding: 15px;
       }
+nav {
+    background: #374151;
+    padding: 15px;
+}
 
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
       nav a {
         color: white;
         text-decoration: none;
@@ -189,10 +212,12 @@
     </header>
 
     <nav>
+      <ul>
       <a href="/">Home</a>
       <a href="/products/">Products</a>
       <a href="/gallery/">Gallery</a>
       <a href="/contact/">Contact</a>
+      </ul>
     </nav>
 
     <section class="hero">
