@@ -71,20 +71,23 @@
       }
 nav {
     background: #374151;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 15px 5px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
+nav::-webkit-scrollbar{
+    display:none;
 }
 
-nav ul li {
-    flex: 1;
-    text-align: center;
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    font-size: 16px;
 }
-
 nav ul li a {
     display: block;
     padding: 12px 2px;
