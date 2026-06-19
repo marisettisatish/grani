@@ -53,20 +53,21 @@
         margin-top: 5px;
       }
 
-      nav {
+       nav {
         background: #374151;
         text-align: center;
         padding: 15px;
       }
 
-      nav {
-        background: #374151;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 15px;
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: bold;
       }
-      nav::-webkit-scrollbar {
-        display: none;
+
+      nav a:hover {
+        color: #fbbf24;
       }
       @media (max-width: 480px) {
         nav ul li a {
@@ -74,14 +75,7 @@
           padding: 10px 1px;
         }
       }
-      nav a {
-        display: inline-block;
-        color: white;
-        text-decoration: none;
-        margin: 0 20px;
-        font-weight: bold;
-      }
-
+    
       .hero {
         text-align: center;
         padding: 20px;
