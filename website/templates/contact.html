@@ -40,23 +40,42 @@
         margin-bottom: 10px;
       }
 
-      nav {
-        background: #374151;
-        text-align: center;
-        padding: 15px;
-      }
+     nav {
+    background: #374151;
+}
 
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
 
-      nav a:hover {
-        color: #fbbf24;
-      }
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
 
+nav ul li a {
+    display: block;
+    padding: 12px 2px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav ul li a:hover {
+    color: #fbbf24;
+}
+@media (max-width: 480px) {
+
+    nav ul li a {
+        font-size: 12px;
+        padding: 10px 1px;
+    }
+
+}
       /* Sections */
 
       .section {
@@ -265,10 +284,12 @@
     </header>
 
     <nav>
+      <ul>
       <a href="/">Home</a>
       <a href="/products/">Products</a>
       <a href="/gallery/">Gallery</a>
       <a href="/contact/">Contact</a>
+      </ul>
     </nav>
 
     <!-- Owner -->
