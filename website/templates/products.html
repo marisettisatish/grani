@@ -29,40 +29,14 @@
         text-align: center;
         padding: 20px;
       }
-<<<<<<< HEAD
+
       .logo-container {
-=======
-       .logo-container {
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
       }
-<<<<<<< HEAD
-
-      .logo {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        background: white;
-      }
-
-      .company-name {
-        text-align: center;
-      }
-
-      .company-name h1 {
-        font-size: 32px;
-      }
-
-      .company-name p {
-        margin-top: 5px;
-      }
-=======
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
 
       .logo {
         width: 100px;
@@ -84,54 +58,35 @@
         margin-top: 5px;
       }
 
-     nav {
+      nav {
         background: #374151;
-        text-align: center;
-        padding: 15px;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #fbbf24;
-      }
-      @media (max-width: 480px) {
-        nav ul li a {
-          font-size: 12px;
-          padding: 10px 1px;
-        }
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 15px 5px;
       }
 
       nav ul {
         list-style: none;
+        margin: 0;
+        padding: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 20px;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
       }
 
-      nav ul li {
-        display: inline;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
+      nav li {
+        display: inline-block;
       }
 
       nav a {
+        display: inline-block;
         color: white;
         text-decoration: none;
-        margin: 0 15px;
+        padding: 10px 12px;
         font-weight: bold;
+        font-size: 16px;
       }
 
       nav a:hover {
@@ -158,7 +113,7 @@
         border-radius: 15px;
         overflow: hidden;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        transition: 0.3s;
+        transition: transform 0.3s ease;
         text-align: center;
       }
 
@@ -211,28 +166,31 @@
         margin-top: 40px;
       }
 
-      .instagram {
-        position: fixed;
-        right: 20px;
-        bottom: 85px;
-        background: #e1306c;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
+      .instagram,
       .whatsapp {
         position: fixed;
         right: 20px;
-        bottom: 20px;
-        background: #25d366;
         color: white;
         padding: 15px 20px;
         border-radius: 50px;
         text-decoration: none;
         font-weight: bold;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .instagram {
+        bottom: 85px;
+        background: #e1306c;
+      }
+
+      .whatsapp {
+        bottom: 20px;
+        background: #25d366;
+      }
+
+      .instagram:hover,
+      .whatsapp:hover {
+        opacity: 0.9;
       }
 
       @media (max-width: 768px) {
@@ -240,15 +198,15 @@
           width: 90%;
         }
 
-        nav a {
-          display: block;
-          margin: 10px 0;
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
         }
       }
     </style>
   </head>
 
- <body>
+  <body>
     <header>
       <div class="logo-container">
         <img src="{% static 'images/log.png' %}" class="logo" alt="Logo" />
@@ -262,10 +220,10 @@
 
     <nav>
       <ul>
-        <a href="/">Home</a>
-        <a href="/products/">Products</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/contact/">Contact</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
 
@@ -531,4 +489,3 @@
     </a>
   </body>
 </html>
-

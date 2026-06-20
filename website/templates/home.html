@@ -53,23 +53,6 @@
         margin-top: 5px;
       }
 
-       nav {
-        background: #374151;
-        text-align: center;
-        padding: 15px;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #fbbf24;
-      }
-<<<<<<< HEAD
       nav {
         background: #374151;
         overflow-x: auto;
@@ -77,58 +60,34 @@
         padding: 15px 5px;
       }
 
-      nav::-webkit-scrollbar {
-        display: none;
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        display: inline-block;
       }
 
       nav a {
         display: inline-block;
         color: white;
         text-decoration: none;
-        margin: 0 10px;
+        padding: 10px 12px;
         font-weight: bold;
         font-size: 16px;
       }
-      nav ul li a:hover {
+
+      nav a:hover {
         color: #fbbf24;
       }
-      @media (max-width: 480px) {
-        nav ul li a {
-          font-size: 12px;
-          padding: 10px 1px;
-        }
-      }
-=======
-    nav {
-    background: #374151;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 15px 5px;
-}
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
 
-nav::-webkit-scrollbar{
-    display:none;
-}
-
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-nav ul li a:hover {
-    color: #fbbf24;
-}
-      @media (max-width: 480px) {
-        nav ul li a {
-          font-size: 12px;
-          padding: 10px 1px;
-        }
-      }
-    
       .hero {
         text-align: center;
         padding: 20px;
@@ -201,11 +160,10 @@ nav ul li a:hover {
         margin-top: 30px;
       }
 
-      .instagram {
+      .instagram,
+      .whatsapp {
         position: fixed;
         right: 20px;
-        bottom: 85px;
-        background: #e1306c;
         color: white;
         padding: 15px 20px;
         border-radius: 50px;
@@ -214,22 +172,30 @@ nav ul li a:hover {
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }
 
+      .instagram {
+        bottom: 85px;
+        background: #e1306c;
+      }
+
       .whatsapp {
-        position: fixed;
-        right: 20px;
         bottom: 20px;
         background: #25d366;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 50px;
-        text-decoration: none;
-        font-weight: bold;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
       }
 
       .instagram:hover,
       .whatsapp:hover {
         opacity: 0.9;
+      }
+
+      @media (max-width: 768px) {
+        nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .hero img {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -248,10 +214,10 @@ nav ul li a:hover {
 
     <nav>
       <ul>
-        <a href="/">Home</a>
-        <a href="/products/">Products</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/contact/">Contact</a>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
     <section class="hero">

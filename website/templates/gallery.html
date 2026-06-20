@@ -22,43 +22,16 @@
       header {
         background: #1f2937;
         color: white;
-        text-align: center;
         padding: 20px;
       }
-<<<<<<< HEAD
+
       .logo-container {
-=======
-       .logo-container {
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 20px;
         flex-wrap: wrap;
       }
-<<<<<<< HEAD
-
-      .logo {
-        width: 100px;
-        height: 100px;
-        object-fit: cover;
-        border-radius: 50%;
-        background: white;
-      }
-
-      .company-name {
-        text-align: center;
-      }
-
-      .company-name h1 {
-        font-size: 32px;
-      }
-
-      .company-name p {
-        margin-top: 5px;
-      }
-=======
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
 
       .logo {
         width: 100px;
@@ -80,23 +53,6 @@
         margin-top: 5px;
       }
 
-   nav {
-        background: #374151;
-        text-align: center;
-        padding: 15px;
-      }
-
-      nav a {
-        color: white;
-        text-decoration: none;
-        margin: 0 15px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #fbbf24;
-      }
-<<<<<<< HEAD
       nav {
         background: #374151;
         overflow-x: auto;
@@ -104,85 +60,177 @@
         padding: 15px 5px;
       }
 
-      nav::-webkit-scrollbar {
-        display: none;
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        display: inline-block;
       }
 
       nav a {
         display: inline-block;
         color: white;
         text-decoration: none;
-        margin: 0 10px;
+        padding: 10px 12px;
         font-weight: bold;
         font-size: 16px;
       }
-      nav ul li a {
-        display: block;
-        padding: 12px 2px;
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-      }
 
-      nav ul li a:hover {
+      nav a:hover {
         color: #fbbf24;
       }
-
-      @media (max-width: 480px) {
-        nav ul li a {
-          font-size: 12px;
-          padding: 10px 1px;
-        }
-      }
-=======
-nav {
-    background: #374151;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 15px 5px;
-}
-
-nav::-webkit-scrollbar{
-    display:none;
-}
-
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-    font-size: 16px;
-}
-nav ul li a {
-    display: block;
-    padding: 12px 2px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-}
-
-nav ul li a:hover {
-    color: #fbbf24;
-}
-
-
-      @media (max-width: 480px) {
-
-    nav ul li a {
-        font-size: 12px;
-        padding: 10px 1px;
-    }
-
-}
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
 
       .section-title {
         text-align: center;
         margin: 30px 0;
         color: #1f2937;
+      }
+
+      .image-slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .image-slider img {
+        width: 350px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .image-slider img:hover {
+        transform: scale(1.03);
+      }
+
+      .video-slider {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .video-slider video {
+        width: 350px;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+      }
+
+      .popup img,
+      #popup-video {
+        max-width: 85%;
+        max-height: 85%;
+      }
+
+      .close {
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+        cursor: pointer;
+      }
+
+      .prev-btn,
+      .next-btn,
+      .zoom-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        font-size: 30px;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+      }
+
+      .prev-btn {
+        left: 20px;
+      }
+
+      .next-btn {
+        right: 20px;
+      }
+
+      .zoom-btn {
+        top: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .zoom-out {
+        left: 80px;
+      }
+
+      footer {
+        background: #1f2937;
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 30px;
+      }
+
+      .instagram,
+      .whatsapp {
+        position: fixed;
+        right: 20px;
+        color: white;
+        text-decoration: none;
+        padding: 15px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+      }
+
+      .instagram {
+        bottom: 85px;
+        background: #e1306c;
+      }
+
+      .whatsapp {
+        bottom: 20px;
+        background: #25d366;
+      }
+
+      @media (max-width: 768px) {
+        .image-slider,
+        .video-slider {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .image-slider img,
+        .video-slider video {
+          width: 90%;
+        }
       }
 
       /* Images */
@@ -332,30 +380,18 @@ nav ul li a:hover {
         <img src="{% static 'images/log.png' %}" class="logo" alt="Logo" />
 
         <div class="company-name">
-<<<<<<< HEAD
           <h1>Chandu Granites, Marbles & Tiles</h1>
           <p>Premium Granite • Marble • Tiles</p>
-=======
-      <h1>Chandu Granites, Marbles & Tiles</h1>
-   <p>Premium Granite • Marble • Tiles</p>
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
         </div>
       </div>
     </header>
 
     <nav>
       <ul>
-<<<<<<< HEAD
-        <a href="/">Home</a>
-        <a href="/products/">Products</a>
-        <a href="/gallery/">Gallery</a>
-        <a href="/contact/">Contact</a>
-=======
-      <a href="/">Home</a>
-      <a href="/products/">Products</a>
-      <a href="/gallery/">Gallery</a>
-      <a href="/contact/">Contact</a>
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
+        <li><a href="/">Home</a></li>
+        <li><a href="/products/">Products</a></li>
+        <li><a href="/gallery/">Gallery</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
 
@@ -384,7 +420,6 @@ nav ul li a:hover {
       <video onclick="openVideo(2)">
         <source src="{% static 'videos/video3.mp4' %}" type="video/mp4" />
       </video>
-<<<<<<< HEAD
       <video onclick="openVideo(3)">
         <source src="{% static 'videos/video4.mp4' %}" type="video/mp4" />
       </video>
@@ -392,15 +427,6 @@ nav ul li a:hover {
         <source src="{% static 'videos/video5.mp4' %}" type="video/mp4" />
       </video>
       <video onclick="openVideo(5)">
-=======
-       <video onclick="openVideo(3)">
-        <source src="{% static 'videos/video4.mp4' %}" type="video/mp4" />
-      </video>
-       <video onclick="openVideo(4)">
-        <source src="{% static 'videos/video5.mp4' %}" type="video/mp4" />
-      </video>
-       <video onclick="openVideo(5)">
->>>>>>> 97de9596083a2c8d9c624d5d118e72b4183077bd
         <source src="{% static 'videos/video6.mp4' %}" type="video/mp4" />
       </video>
       <video onclick="openVideo(6)">
