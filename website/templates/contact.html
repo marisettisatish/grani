@@ -39,7 +39,33 @@
       header h1 {
         margin-bottom: 10px;
       }
+      .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
 
+      .logo {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 50%;
+        background: white;
+      }
+
+      .company-name {
+        text-align: center;
+      }
+
+      .company-name h1 {
+        font-size: 32px;
+      }
+
+      .company-name p {
+        margin-top: 5px;
+      }
       nav {
         background: #374151;
         text-align: center;
@@ -56,7 +82,44 @@
       nav a:hover {
         color: #fbbf24;
       }
+      nav {
+        background: #374151;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 15px 5px;
+      }
 
+      nav::-webkit-scrollbar {
+        display: none;
+      }
+
+      nav a {
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 12px 2px;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      nav ul li a:hover {
+        color: #fbbf24;
+      }
+      @media (max-width: 480px) {
+        nav ul li a {
+          font-size: 12px;
+          padding: 10px 1px;
+        }
+      }
       /* Sections */
 
       .section {
@@ -259,16 +322,23 @@
 
   <body>
     <header>
-      <h1>Chandu Granites, Marbles & Tiles</h1>
+      <div class="logo-container">
+        <img src="{% static 'images/log.png' %}" class="logo" alt="Logo" />
 
-      <p>Contact Us</p>
+        <div class="company-name">
+          <h1>Chandu Granites, Marbles & Tiles</h1>
+          <p>Premium Granite • Marble • Tiles</p>
+        </div>
+      </div>
     </header>
 
     <nav>
-      <a href="/">Home</a>
-      <a href="/products/">Products</a>
-      <a href="/gallery/">Gallery</a>
-      <a href="/contact/">Contact</a>
+      <ul>
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
+        <a href="/gallery/">Gallery</a>
+        <a href="/contact/">Contact</a>
+      </ul>
     </nav>
 
     <!-- Owner -->
